@@ -1,76 +1,64 @@
 # Getting Started with the Blazor Range Selector Component
 
-[Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples) is an interface for selecting a small range from a larger collection.A quick-start project that helps you get up and running with the Syncfusion Range Selector component in a Blazor WebAssembly application. This project contains the code to bind data; set ranges, series types, and a tooltip; customize grid and tick lines. You can also find the code to render a lightweight range selector without a chart.
+## Overview
+
+This sample demonstrates the Syncfusion [Blazor Range Selector](https://www.syncfusion.com/forums) component in a hosted Blazor WebAssembly application. The implementation uses the `SfRangeNavigator` component to visualize stock price data and enable interactive date-range selection. Users can focus on a specific portion of a larger dataset by selecting a range directly within the navigator. The sample also illustrates tooltip configuration, area-series rendering, and customization of grid and tick lines.
+
+## Key Features
+
+- Uses the `SfRangeNavigator` component for interactive range selection.
+- Binds stock price data using the `DataSource="StockDetails"` property.
+- Configures date-based navigation with `ValueType="RangeValueType.DateTime"`.
+- Formats axis labels using `LabelFormat="MMM-yy"`.
+- Defines an initial selected range through the `Value` property using dates.
+- Customizes major grid lines using `RangeNavigatorMajorGridLines`.
+- Customizes major tick lines using `RangeNavigatorMajorTickLines`.
+- Enables range selection tooltips using `RangeNavigatorRangeTooltipSettings`.
+- Keeps tooltips visible using `DisplayMode="TooltipDisplayMode.Always"`.
+- Renders stock data using `RangeNavigatorSeries`.
+- Demonstrates strongly typed data binding through the `StockPrice` model containing `Date` and `Close` properties.
+- Uses an area-series visualization to display stock performance over time.
 
 ## Prerequisites
 
-* Visual studio 2022
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or [Visual Studio Code](https://code.visualstudio.com/)
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) compatible with the project's target framework
 
-## How to run the project
+## How to Run the Project
 
-* Checkout this project to a location in your disk.
-* Open the solution file using the Visual Studio 2022.
-* Restore the NuGet packages by rebuilding the solution.
-* Run the project.
+**Visual Studio 2022**
 
-## Features and benefits
-## Data Types
-Plot any type of data in a Blazor Range Selector using different value types like numeric, date-time, and logarithmic.
+1. Clone or download this repository.
+2. Open the `GettingStarted.sln` solution file.
+3. Restore NuGet packages.
+5. Build the solution.
+6. Run the application using `Ctrl+F5`.
 
-## Binding selected data
-Bind selected data from the range selector to any other data visualization control using built-in events.
+**Visual Studio Code**
 
-## Deferred scrolling
+1. Open the repository folder in Visual Studio Code.
+2. Open the integrated terminal.
+3. Navigate to the project directory.
 
-Allows you to defer the selected range to be updated until the user stops dragging the thumbs. This provides a smooth scrolling experience.
+```bash
+dotnet restore
+dotnet run
+```
 
-## Range selection
-The Blazor Range Selector component provides the following three ways to select a range:
+4. Open the URL displayed in the terminal after the application starts.
 
-* Select a range through labels.
-* Drag the left and right thumbs.
-* Drag the selected range to maintain the same delta.
+## Project Structure
 
-## Globalization and localization 
+- `GettingStarted.sln` — Visual Studio solution file containing the sample projects.
 
-### Globalization
+- `Client/Pages/Index.razor` — Main sample page demonstrating notification badges integrated within a Syncfusion Toolbar.
 
-The Blazor Range Selector allows users from different locales to format dates, currency, and numbering to suit preferences. The Blazor Range Selector uses the Essential JS 2 internalization library for handling value formatting.
+## Support and Feedback
 
-### Right to left {RTL}
+- For general product questions, visit the [Syncfusion Community Forum](https://www.syncfusion.com/forums) or [Syncfusion Support](https://www.syncfusion.com/support).
+- To report an issue specific to this sample, open a GitHub issue in this repository.
+- For implementation details, see the [relevant official Syncfusion documentation](https://blazor.syncfusion.com/documentation/badge/getting-started).
 
-The Blazor Range Selector supports right-to-left rendering, allowing the series and scale direction to be displayed from the right to left. This improves the user experience and accessibility of RTL languages.
+## License
 
-## Related links
-[Learn More about Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[Download Free Trial](https://www.syncfusion.com/downloads/blazor?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[Pricing](https://www.syncfusion.com/sales/products/blazor?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[Documentation](https://blazor.syncfusion.com/documentation/range-selector/getting-started?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[View Demos](https://github.com/SyncfusionExamples/getting-started-with-blazor-range-selector-component.git?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[Community Forums](https://www.syncfusion.com/forums/blazor-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[Suggest a feature or report a bug](https://www.syncfusion.com/feedback/blazor-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[Online examples](https://blazor.syncfusion.com/demos/range-selector/range-navigator?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-[Knowledge Base](https://www.syncfusion.com/kb/blazor-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)
-
-### About Syncfusion Blazor Components
-The Syncfusion's [Blazor components](https://www.syncfusion.com/blazor-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples) library offers over 70 UI components to work with Blazor server-side and client-side (Blazor WebAssembly) projects seamlessly. In addition to Range Selector, we provide popular Blazor Components such as [DataGrid](https://www.syncfusion.com/blazor-range-selector-components/blazor-datagrid?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), and [Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples).
-
-### About Syncfusion
-
-Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 28,000 customers and more than 1 million users, including large financial institutions, Fortune 500 companies, and global IT consultancies.
-
-Today, we provide 1700+ components and frameworks for web ([Blazor](https://www.syncfusion.com/blazor-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [ASP.NET WebForms](https://www.syncfusion.com/jquery/aspnet-webforms-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [Angular](https://www.syncfusion.com/angular-ui-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [React](https://www.syncfusion.com/react-ui-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [Vue](https://www.syncfusion.com/vue-ui-components?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), and [Flutter](https://www.syncfusion.com/flutter-widgets?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)), mobile ([Xamarin](https://www.syncfusion.com/xamarin-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [Flutter](https://www.syncfusion.com/flutter-widgets?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [UWP](https://www.syncfusion.com/uwp-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), and [.NET MAUI](https://www.syncfusion.com/maui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)), and desktop development ([WinForms](https://www.syncfusion.com/winforms-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [WPF](https://www.syncfusion.com/wpf-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [WinUI](https://www.syncfusion.com/winui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [Flutter](https://www.syncfusion.com/flutter-widgets?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), [UWP](https://www.syncfusion.com/uwp-ui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples), and [.NET MAUI](https://www.syncfusion.com/maui-controls?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples)). We provide ready-to-deploy enterprise software for dashboards, reports, data integration, and big data processing. Many customers have saved millions in licensing fees by deploying our software.
-
-<hr style="height:0.3px;border:none;color:lightgrey;background-color:lightgrey;" />
-
-<p align="center">
-<a href="mailto:sales@syncfusion.com?Subject=Syncfusion Blazor Range Selector - GitHub" target="_top">sales@syncfusion.com</a> | <a href="https://www.syncfusion.com?utm_source=github&utm_medium=listing&utm_campaign=blazor-range-selector-github-samples">www.syncfusion.com</a> | Toll Free: 1-888-9 DOTNET <br>
-</p>
+This is a Syncfusion sample project provided to demonstrate product usage. Review the [Syncfusion license terms](https://www.syncfusion.com/sales/pricing?category=ui-components) before using Syncfusion components in your own applications.
